@@ -1,0 +1,7 @@
+# Manim cache
+media/videos/*/partial_movie_files/
+media/texts/
+media/Tex/
+__pycache__/
+*.pyc
+.DS_Store

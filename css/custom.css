@@ -1,0 +1,94 @@
+/* Calm, leisurely Pythagorean Theorem lesson */
+
+.reveal .slides {
+    text-align: center;
+}
+
+.reveal h1 {
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #ccc;
+}
+
+.reveal h2 {
+    font-size: 1.1em;
+    font-weight: normal;
+    color: #ccc;
+}
+
+/* Soft, muted colors */
+.red { color: #c99; }
+.green { color: #9b9; }
+.yellow { color: #cb8; }
+.white { color: #bbb; }
+
+/* Superscripts */
+sup {
+    font-size: 0.65em;
+    vertical-align: super;
+}
+
+sup.red { color: #c99; }
+sup.green { color: #9b9; }
+sup.yellow { color: #cb8; }
+
+/* Equation - comfortable reading size */
+.giant-equation {
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
+.big-equation {
+    font-size: 1.15em;
+    font-weight: normal;
+}
+
+/* Regular text */
+.big-text {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+/* Helper text */
+.subtle {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 1em;
+}
+
+/* Highlight - gentle */
+.highlight-text {
+    color: #cb8;
+}
+
+/* Diagrams */
+.triangle-diagram {
+    margin: 1.5em auto;
+}
+
+.equation-with-triangle {
+    margin-bottom: 0.8em;
+}
+
+/* Video */
+.reveal video {
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Diagram image */
+.diagram-image {
+    max-width: 85%;
+    max-height: 55vh;
+    border-radius: 8px;
+}
+
+/* Comfortable spacing */
+.reveal p {
+    margin: 0.6em 0;
+}
+
+.reveal section {
+    padding: 1.5em;
+}
