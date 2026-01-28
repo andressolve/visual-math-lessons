@@ -3,167 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Pythagorean Theorem</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/night.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <title>Visual Math Lessons</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #1a1a2e;
+            color: #ccc;
+            margin: 0;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-weight: 300;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #eee;
+        }
+        .subtitle {
+            color: #888;
+            margin-bottom: 3rem;
+        }
+        .lessons {
+            display: grid;
+            gap: 1.5rem;
+        }
+        .lesson-card {
+            background: #252542;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .lesson-card:hover {
+            background: #2d2d4a;
+            transform: translateY(-2px);
+        }
+        .lesson-card h2 {
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin: 0 0 0.5rem 0;
+            color: #eee;
+        }
+        .lesson-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #999;
+        }
+        .tag {
+            display: inline-block;
+            background: #3a3a5c;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 0.8rem;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
-    <div class="reveal">
-        <div class="slides">
+    <div class="container">
+        <h1>Visual Math Lessons</h1>
+        <p class="subtitle">Interactive lessons with animated proofs</p>
 
-            <!-- 1: Title -->
-            <section>
-                <h1>The Pythagorean Theorem</h1>
-            </section>
+        <div class="lessons">
+            <a href="lessons/pythagorean-theorem/" class="lesson-card">
+                <h2>The Pythagorean Theorem</h2>
+                <p>Why does a² + b² = c²? A visual proof using area conservation.</p>
+                <span class="tag">Geometry</span>
+            </a>
 
-            <!-- 2: A Visual Journey -->
-            <section>
-                <p class="big-text">A Visual Journey</p>
-            </section>
-
-            <!-- 3: Meet the triangle -->
-            <section>
-                <h2>Meet the Right Triangle</h2>
-                <div class="triangle-diagram">
-                    <svg viewBox="0 0 220 170" width="352" height="272">
-                        <polygon points="30,150 190,150 190,30" fill="rgba(88,166,255,0.3)" stroke="#58a6ff" stroke-width="3"/>
-                        <polyline points="170,150 170,130 190,130" fill="none" stroke="white" stroke-width="2"/>
-                    </svg>
-                </div>
-            </section>
-
-            <!-- 4: The legs -->
-            <section>
-                <h2>The Two Legs</h2>
-                <div class="triangle-diagram">
-                    <svg viewBox="0 0 220 170" width="352" height="272">
-                        <polygon points="30,150 190,150 190,30" fill="rgba(88,166,255,0.3)" stroke="#58a6ff" stroke-width="3"/>
-                        <polyline points="170,150 170,130 190,130" fill="none" stroke="white" stroke-width="2"/>
-                        <text x="110" y="168" fill="#ff6b6b" font-size="28" text-anchor="middle" font-weight="bold">a</text>
-                        <text x="200" y="95" fill="#69db7c" font-size="28" font-weight="bold">b</text>
-                    </svg>
-                </div>
-            </section>
-
-            <!-- 5: The hypotenuse -->
-            <section>
-                <h2>The Hypotenuse</h2>
-                <div class="triangle-diagram">
-                    <svg viewBox="0 0 220 170" width="352" height="272">
-                        <polygon points="30,150 190,150 190,30" fill="rgba(88,166,255,0.3)" stroke="#58a6ff" stroke-width="3"/>
-                        <line x1="30" y1="150" x2="190" y2="30" stroke="#ffd43b" stroke-width="5"/>
-                        <text x="95" y="80" fill="#ffd43b" font-size="32" font-weight="bold">c</text>
-                    </svg>
-                </div>
-                <p class="subtle">(the longest side)</p>
-            </section>
-
-            <!-- 6: The equation intro -->
-            <section>
-                <h2>The Theorem</h2>
-            </section>
-
-            <!-- 7: The equation -->
-            <section>
-                <div class="equation-with-triangle">
-                    <svg viewBox="0 0 220 170" width="340" height="260">
-                        <polygon points="30,150 190,150 190,30" fill="rgba(88,166,255,0.3)" stroke="#58a6ff" stroke-width="3"/>
-                        <polyline points="170,150 170,130 190,130" fill="none" stroke="white" stroke-width="2"/>
-                        <text x="110" y="168" fill="#ff6b6b" font-size="26" text-anchor="middle" font-weight="bold">a</text>
-                        <text x="200" y="95" fill="#69db7c" font-size="26" font-weight="bold">b</text>
-                        <line x1="30" y1="150" x2="190" y2="30" stroke="#ffd43b" stroke-width="4"/>
-                        <text x="95" y="80" fill="#ffd43b" font-size="26" font-weight="bold">c</text>
-                    </svg>
-                </div>
-                <p class="big-equation">
-                    <span class="yellow">c</span><sup class="yellow">2</sup>
-                    <span class="white">=</span>
-                    <span class="red">a</span><sup class="red">2</sup>
-                    <span class="white">+</span>
-                    <span class="green">b</span><sup class="green">2</sup>
-                </p>
-            </section>
-
-            <!-- 8: But why -->
-            <section>
-                <h2>But WHY?</h2>
-            </section>
-
-            <!-- 9: Let's see -->
-            <section>
-                <p class="big-text highlight-text">Let's see why it works!</p>
-            </section>
-
-            <!-- 10: The Visual Proof Video -->
-            <section>
-                <video controls width="780">
-                    <source src="media/videos/pythagorean_proof/720p30/PythagoreanProof.mp4" type="video/mp4">
-                </video>
-            </section>
-
-            <!-- 11: The Key Insight - diagram + equation together -->
-            <section>
-                <p class="subtle" style="margin-bottom: 0.3em;">Same square, same triangles → same uncovered area</p>
-                <img src="media/configurations.png" alt="Two configurations" class="diagram-image" style="max-height: 42vh;">
-                <p class="big-equation" style="margin-top: 0.5em;">
-                    <span class="yellow">c</span><sup class="yellow">2</sup>
-                    <span class="white">=</span>
-                    <span class="red">a</span><sup class="red">2</sup>
-                    <span class="white">+</span>
-                    <span class="green">b</span><sup class="green">2</sup>
-                </p>
-            </section>
-
-            <!-- 12: Numeric verification -->
-            <section>
-                <video controls width="700">
-                    <source src="media/videos/pythagorean_proof/720p30/NumericExample.mp4" type="video/mp4">
-                </video>
-                <p class="subtle">Checking with the 3-4-5 triangle</p>
-            </section>
-
-            <!-- 13: Summary -->
-            <section>
-                <p class="subtle">The Pythagorean Theorem</p>
-                <div class="equation-with-triangle">
-                    <svg viewBox="0 0 220 170" width="200" height="150">
-                        <polygon points="30,150 190,150 190,30" fill="rgba(88,166,255,0.3)" stroke="#58a6ff" stroke-width="3"/>
-                        <polyline points="170,150 170,130 190,130" fill="none" stroke="white" stroke-width="2"/>
-                        <text x="110" y="168" fill="#c99" font-size="26" text-anchor="middle">a</text>
-                        <text x="200" y="95" fill="#9b9" font-size="26">b</text>
-                        <line x1="30" y1="150" x2="190" y2="30" stroke="#cb8" stroke-width="4"/>
-                        <text x="95" y="80" fill="#cb8" font-size="26">c</text>
-                    </svg>
-                </div>
-                <p class="big-equation">
-                    <span class="yellow">c</span><sup class="yellow">2</sup>
-                    <span class="white">=</span>
-                    <span class="red">a</span><sup class="red">2</sup>
-                    <span class="white">+</span>
-                    <span class="green">b</span><sup class="green">2</sup>
-                </p>
-                <p class="subtle">For any right triangle, the square of the hypotenuse equals the sum of the squares of the legs.</p>
-            </section>
-
-            <!-- 14: Closing -->
-            <section>
-                <p class="big-text">Now you know not just the formula, but <span class="highlight-text">why it works</span>.</p>
-            </section>
+            <!-- Future lessons go here -->
 
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
-    <script>
-        Reveal.initialize({
-            hash: true,
-            slideNumber: true,
-            transition: 'fade',
-            transitionSpeed: 'slow',
-            controls: true,
-            progress: true
-        });
-    </script>
 </body>
 </html>
