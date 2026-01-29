@@ -123,7 +123,7 @@ class HalfOfAThird(Scene):
         question_part1 = Text("How much of the square is ", font_size=28, color=GRAY)
         question_part2 = Text("this", font_size=28, color=PRODUCT_COLOR)
         question_part3 = Text("?", font_size=28, color=GRAY)
-        question = VGroup(question_part1, question_part2, question_part3).arrange(RIGHT, buff=0.08)
+        question = VGroup(question_part1, question_part2, question_part3).arrange(RIGHT, buff=0.08, aligned_edge=DOWN)
         question.to_edge(UP)
 
         self.play(Write(question))
@@ -241,7 +241,7 @@ class AreaOfRectangle(Scene):
         question_part1 = Text("What's the area of this ", font_size=28, color=GRAY)
         question_part2 = Text("rectangle", font_size=28, color=RECT_COLOR)
         question_part3 = Text("?", font_size=28, color=GRAY)
-        question = VGroup(question_part1, question_part2, question_part3).arrange(RIGHT, buff=0.08)
+        question = VGroup(question_part1, question_part2, question_part3).arrange(RIGHT, buff=0.08, aligned_edge=DOWN)
         question.to_edge(UP)
 
         self.play(Write(question))
