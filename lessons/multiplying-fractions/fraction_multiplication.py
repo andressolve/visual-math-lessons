@@ -136,8 +136,8 @@ class HalfOfAThird(Scene):
         # Make the purple piece pulse
         self.play(Indicate(half_of_third, color=WHITE, scale_factor=1.05))
 
-        # Show "= 1/6" below the question
-        answer = Text("= 1/6", font_size=36, color=PRODUCT_COLOR)
+        # Show "1/6" below the question
+        answer = Text("1/6", font_size=36, color=PRODUCT_COLOR)
         answer.next_to(question, DOWN, buff=0.4)
         self.play(FadeIn(answer))
         self.wait(1.5)
