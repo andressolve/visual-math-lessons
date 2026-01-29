@@ -1,0 +1,135 @@
+/* Calm, leisurely Multiplying Fractions lesson */
+
+.reveal .slides {
+    text-align: center;
+}
+
+.reveal h1 {
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #ccc;
+}
+
+.reveal h2 {
+    font-size: 1.1em;
+    font-weight: normal;
+    color: #ccc;
+}
+
+/* Soft, muted colors */
+.purple { color: #b8a5e8; }
+.blue { color: #8ac4f0; }
+.white { color: #bbb; }
+
+/* Fractions - slightly emphasized */
+.fraction {
+    color: #ddd;
+    font-weight: normal;
+}
+
+/* Highlight - warm accent */
+.highlight-text {
+    color: #cb8;
+}
+
+/* Equation - comfortable reading size */
+.big-equation {
+    font-size: 1.3em;
+    font-weight: normal;
+    margin-top: 0.8em;
+}
+
+/* Regular text */
+.big-text {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+/* Helper text */
+.subtle {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+/* Diagrams */
+.diagram {
+    margin: 0.5em auto;
+}
+
+/* Video */
+.reveal video {
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Comfortable spacing */
+.reveal p {
+    margin: 0.6em 0;
+}
+
+.reveal section {
+    padding: 1.5em;
+}
+
+/* Exercise inputs */
+.answer-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    margin-top: 1em;
+}
+
+.fraction-input {
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 1.2em;
+    text-align: center;
+    background: #2a2a4a;
+    border: 2px solid #555;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.fraction-input:focus {
+    outline: none;
+    border-color: #9775fa;
+}
+
+.fraction-bar {
+    font-size: 1.5em;
+    color: #888;
+}
+
+.check-btn {
+    margin-left: 1em;
+    padding: 0.5em 1.2em;
+    font-size: 1em;
+    background: #3a3a5c;
+    border: none;
+    border-radius: 6px;
+    color: #ccc;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.check-btn:hover {
+    background: #4a4a6c;
+}
+
+.feedback {
+    margin-top: 0.4em;
+    font-size: 1.1em;
+    min-height: 1.2em;
+}
+
+.feedback.correct {
+    color: #69db7c;
+}
+
+.feedback.incorrect {
+    color: #ff6b6b;
+}
