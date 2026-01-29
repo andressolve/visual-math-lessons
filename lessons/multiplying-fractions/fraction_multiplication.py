@@ -85,8 +85,8 @@ class HalfOfAThird(Scene):
         self.play(Write(half_label))
         self.wait(0.5)
 
-        # Vertical line at midpoint
-        v_line = Line(bl + RIGHT * square_size/2, tl + RIGHT * square_size/2, color=GRID_COLOR, stroke_width=2)
+        # Vertical line at midpoint (top to bottom)
+        v_line = Line(tl + RIGHT * square_size/2, bl + RIGHT * square_size/2, color=GRID_COLOR, stroke_width=2)
         self.play(Create(v_line), run_time=0.8)
         self.wait(0.5)
 
@@ -120,10 +120,11 @@ class HalfOfAThird(Scene):
         # ═══════════════════════════════════════════════════════
 
         # "How much of the square is this?" with "this" in purple
-        question_part1 = Text("How much of the square is ", font_size=28, color=GRAY)
-        question_part2 = Text("this", font_size=28, color=PRODUCT_COLOR)
-        question_part3 = Text("?", font_size=28, color=GRAY)
-        question = VGroup(question_part1, question_part2, question_part3).arrange(RIGHT, buff=0.08, aligned_edge=DOWN)
+        question = MarkupText(
+            f'How much of the square is <span foreground="{PRODUCT_COLOR}">this</span>?',
+            font_size=28,
+            color=GRAY
+        )
         question.to_edge(UP)
 
         self.play(Write(question))
