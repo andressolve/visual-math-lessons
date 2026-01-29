@@ -147,8 +147,8 @@ class HalfOfAThird(Scene):
         # STEP 8: Show the equation
         # ═══════════════════════════════════════════════════════
 
-        # Equation: 1/2 of 1/3 = 1/6
-        equation = Text("1/2 of 1/3 = 1/6", font_size=44, color=WHITE)
+        # Equation: 1/2 × 1/3 = 1/6
+        equation = Text("1/2 × 1/3 = 1/6", font_size=44, color=WHITE)
         equation.to_edge(DOWN, buff=1.2)
 
         self.play(Write(equation))
@@ -239,10 +239,11 @@ class AreaOfRectangle(Scene):
         # ═══════════════════════════════════════════════════════
 
         # "What's the area of this rectangle?" with "rectangle" in blue
-        question_part1 = Text("What's the area of this ", font_size=28, color=GRAY)
-        question_part2 = Text("rectangle", font_size=28, color=RECT_COLOR)
-        question_part3 = Text("?", font_size=28, color=GRAY)
-        question = VGroup(question_part1, question_part2, question_part3).arrange(RIGHT, buff=0.08, aligned_edge=DOWN)
+        question = MarkupText(
+            f'What\'s the area of this <span foreground="{RECT_COLOR}">rectangle</span>?',
+            font_size=28,
+            color=GRAY
+        )
         question.to_edge(UP)
 
         self.play(Write(question))
@@ -270,19 +271,6 @@ class AreaOfRectangle(Scene):
 
         # Pulse the rectangle
         self.play(Indicate(product_rect, color=WHITE, scale_factor=1.05))
-
-        # Change to purple to match perspective 1
-        product_rect_purple = Rectangle(
-            width=rect_width,
-            height=rect_height,
-            color=PRODUCT_COLOR,
-            fill_color=PRODUCT_COLOR,
-            fill_opacity=0.7,
-            stroke_width=3
-        )
-        product_rect_purple.move_to(tl + RIGHT * rect_width/2 + DOWN * rect_height/2)
-
-        self.play(Transform(product_rect, product_rect_purple))
         self.wait(0.5)
 
         # ═══════════════════════════════════════════════════════
@@ -290,7 +278,7 @@ class AreaOfRectangle(Scene):
         # ═══════════════════════════════════════════════════════
 
         # Show "Area = 1/6" below the question (keep labels visible)
-        answer = Text("Area = 1/6", font_size=36, color=PRODUCT_COLOR)
+        answer = Text("Area = 1/6", font_size=36, color=RECT_COLOR)
         answer.next_to(question, DOWN, buff=0.4)
         self.play(FadeIn(answer))
         self.wait(1.5)
@@ -302,7 +290,7 @@ class AreaOfRectangle(Scene):
         self.play(Write(equation))
         self.wait(0.5)
 
-        box = SurroundingRectangle(equation, color=PRODUCT_COLOR, buff=0.2, corner_radius=0.1)
+        box = SurroundingRectangle(equation, color=RECT_COLOR, buff=0.2, corner_radius=0.1)
         self.play(Create(box))
         self.wait(2)
 
