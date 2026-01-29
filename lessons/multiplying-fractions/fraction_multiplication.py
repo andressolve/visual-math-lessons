@@ -116,16 +116,17 @@ class HalfOfAThird(Scene):
         self.play(FadeOut(result_label))
 
         # ═══════════════════════════════════════════════════════
-        # STEP 6: Reveal the grid - 6 equal pieces
+        # STEP 6: Ask the question (stays visible)
         # ═══════════════════════════════════════════════════════
 
-        count_label = Text("How much of the square is this?", font_size=28, color=GRAY).to_edge(UP)
-        self.play(Write(count_label))
-        self.wait(1)
+        # "How much of the square is this?" with "this" in purple
+        question_part1 = Text("How much of the square is ", font_size=28, color=GRAY)
+        question_part2 = Text("this", font_size=28, color=PRODUCT_COLOR)
+        question_part3 = Text("?", font_size=28, color=GRAY)
+        question = VGroup(question_part1, question_part2, question_part3).arrange(RIGHT, buff=0.08)
+        question.to_edge(UP)
 
-        # Show "6 equal pieces"
-        six_pieces_label = Text("6 equal pieces", font_size=32, color=WHITE).to_edge(UP)
-        self.play(FadeOut(count_label), FadeIn(six_pieces_label))
+        self.play(Write(question))
         self.wait(1)
 
         # ═══════════════════════════════════════════════════════
@@ -135,21 +136,21 @@ class HalfOfAThird(Scene):
         # Make the purple piece pulse
         self.play(Indicate(half_of_third, color=WHITE, scale_factor=1.05))
 
-        one_of_six = Text("1 out of 6", font_size=36, color=PRODUCT_COLOR).to_edge(UP)
-        self.play(FadeOut(six_pieces_label), FadeIn(one_of_six))
+        # Show "= 1/6" below the question
+        answer = Text("= 1/6", font_size=36, color=PRODUCT_COLOR)
+        answer.next_to(question, DOWN, buff=0.4)
+        self.play(FadeIn(answer))
         self.wait(1.5)
 
         # ═══════════════════════════════════════════════════════
         # STEP 8: Show the equation
         # ═══════════════════════════════════════════════════════
 
-        self.play(FadeOut(one_of_six))
-
         # Equation: 1/2 of 1/3 = 1/6
         equation = Text("1/2 of 1/3 = 1/6", font_size=44, color=WHITE)
         equation.to_edge(DOWN, buff=1.2)
 
-        self.play(Write(equation), run_time=1.5)
+        self.play(Write(equation))
         self.wait(0.5)
 
         # Box the answer
